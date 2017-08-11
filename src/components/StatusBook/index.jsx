@@ -12,18 +12,12 @@ class StatusBook extends Component {
 
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault()
-    if (this.props.handleStatusBook)
-      this.props.handleStatusBook(this.props.book, e.target.value)
-  }
-
   render () {
 
     return (
       <div>
         <div className="book-shelf-changer">
-          <form onSubmit={this.handleSubmit}>
+          <form>
             <select defaultValue={this.props.shelf} onChange={ this.onChange}  name="shelf">
               <option value="none" disabled>Move to...</option>
               <option value="currentlyReading">Currently Reading</option>
