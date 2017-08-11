@@ -1,0 +1,39 @@
+{
+  "name": "Reads",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "",
+  "devDependencies": {
+    "babel-preset-es2015": "latest",
+    "babel-preset-react": "latest",
+    "babel-preset-stage-0": "latest",
+    "enzyme": "latest",
+    "gh-pages": "latest",
+    "react-addons-test-utils": "latest",
+    "react-scripts": "latest",
+    "webpack": "^2.1.0-beta.22"
+  },
+  "dependencies": {
+    "css-loader": "latest",
+    "django-react-csrftoken": "^1.0.1",
+    "form-serialize": "^0.7.2",
+    "prop-types": "^15.5.10",
+    "react": "latest",
+    "react-addons-test-utils": "latest",
+    "react-dom": "latest",
+    "react-icons": "latest",
+    "react-redux": "latest",
+    "react-router": "latest",
+    "react-router-dom": "^4.1.2",
+    "redux": "latest",
+    "style-loader": "latest"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "clear": "rimraf build",
+    "deploy": "npm run build&&gh-pages -d build"
+  }
+}
