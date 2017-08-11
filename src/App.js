@@ -42,6 +42,8 @@ class BooksApp extends Component {
         let existingBook = this.state.books.find(b => b.id === book.id);
         if (existingBook) {
           book.shelf = existingBook.shelf
+        } else {
+          book.shelf = 'none'
         }
         return book;
       });
@@ -55,7 +57,9 @@ class BooksApp extends Component {
   handleStatusBook(book, shelf) {
     BooksAPI.update(book,  shelf).then(() => {
       let bookItems = this.state.books;
+
       let existingBook = bookItems.find(b => b.id === book.id);
+
       if (existingBook) {
         bookItems = bookItems.map(b => {
           if(b.id === book.id){
@@ -63,7 +67,13 @@ class BooksApp extends Component {
           }
           return b;
         });
+
+      } else {
+        // el libro no esta en mi lista, debemo añadirlo al state
+        const newBook = Object.assign({}, book, { shelf: shelf });
+        bookItems = bookItems.concat([newBook]);
       }
+
       this.setState({
         books: bookItems,
       });

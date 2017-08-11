@@ -18,10 +18,6 @@ class StatusBook extends Component {
       this.props.handleStatusBook(this.props.book, e.target.value)
   }
 
-  componentDidMount() {
-    console.log(this.props.book);
-  }
-
   render () {
 
     return (
