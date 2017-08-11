@@ -30,8 +30,15 @@ class BooksApp extends Component {
   searchBook(books) {
 
     BooksAPI.search(books).then(books => {
+      let mySearch = []
 
-      books.map(book => {
+      if (books.length > 0) {
+        mySearch = books
+      } else {
+        mySearch = []
+      }
+
+      mySearch.map(book => {
         let existingBook = this.state.books.find(b => b.id === book.id);
         if (existingBook) {
           book.shelf = existingBook.shelf
@@ -42,9 +49,7 @@ class BooksApp extends Component {
       this.setState(state => ({
         results: books,
       }))
-
     })
-
   }
 
   handleStatusBook(book, shelf) {
