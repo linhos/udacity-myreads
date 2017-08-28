@@ -1,13 +1,15 @@
 ## How to install
 
 
-Installing the software is very simple. You should only have npm and yarn installed on your system.
+Installing the software is very simple. You should only have [npm](https://docs.npmjs.com/) and [yarn](https://yarnpkg.com/en/docs) installed on your system.
 
 Once done, clone the project and within the project folder execute the following commands:
 
-Npm install - to install the necessary dependencies
+npm install - to install the necessary dependencies
 
-Yarn start - to start the project
+yarn start - to start the project
+
+visit the page localhost:3000
 
 
 
