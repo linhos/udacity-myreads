@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import StatusBook from '../StatusBook'
+import BookDetail from '../BookDetail'
 
 class Books extends Component {
 
@@ -16,36 +17,15 @@ class Books extends Component {
           <ol className="books-grid">
               {bookList.length > 0 && bookList.map((book) => (
                   <li key={book.id} name={book.shelf}>
+                      <BookDetail 
+                      smallThumbnail = {book.imageLinks.smallThumbnail} 
+                      handleStatusBook = {this.props.handleStatusBook} 
+                      shelf = {book.shelf}
+                      book = {book}
+                      title= {book.title}
+                      authors= {book.authors}
+                      />
 
-                    <div className="book">
-                      <div className="book-top">
-                        <div className="book-cover" style={{
-                          width: 128,
-                          height: 188,
-                          backgroundImage: `url(${book.imageLinks.smallThumbnail})`
-                        }}></div>
-
-                        <StatusBook
-
-                          handleStatusBook={this.props.handleStatusBook}
-
-                          shelf={book.shelf}
-
-                          book={book}
-                        />
-
-                      </div>
-                      <div className="book-title">{book.title}</div>
-                      <div className="book-authors">
-
-                            { book.authors && book.authors.map((author) => (
-
-                                <span key={book.id + author}>{author}, </span>
-
-                            ))}
-
-                      </div>
-                    </div>
                   </li>
               ))}
           </ol>

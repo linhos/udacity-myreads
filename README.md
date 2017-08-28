@@ -1,6 +1,15 @@
-This is the starter template for the final assessment project for Udacity's React Fundamentals course, developed by [React Training](https://reacttraining.com). The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+## How to install
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+
+Installing the software is very simple. You should only have npm and yarn installed on your system.
+
+Once done, clone the project and within the project folder execute the following commands:
+
+Npm install - to install the necessary dependencies
+
+Yarn start - to start the project
+
+
 
 ## What You're Getting
 ```

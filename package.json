@@ -22,6 +22,7 @@
     "react-addons-test-utils": "latest",
     "react-dom": "latest",
     "react-icons": "latest",
+    "react-key-index": "^0.1.1",
     "react-redux": "latest",
     "react-router": "latest",
     "react-router-dom": "^4.1.2",
